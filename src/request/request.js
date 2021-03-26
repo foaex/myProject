@@ -10,6 +10,7 @@ export function request (config) {
   instance.interceptors.request.use(config => {
     // 拦截成功输出
     // console.log(config)
+    config.headers.Authorization = window.sessionStorage.getItem('token')
     return config
   }, err => {
     // 拦截失败输出
@@ -18,7 +19,7 @@ export function request (config) {
 
   // 2.2 响应拦截
   instance.interceptors.response.use(res => {
-    console.log(res)
+    // console.log(res)
     return res.data
   }, err => {
     console.log(err)

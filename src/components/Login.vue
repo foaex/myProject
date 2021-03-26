@@ -66,7 +66,7 @@ export default {
         const psd = this.$refs.loginPassword.value
         request({
           url: '/login',
-          type: 'post',
+          method: 'get',
           params: {
             username: username,
             password: psd
