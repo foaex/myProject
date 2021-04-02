@@ -384,6 +384,9 @@ export default {
         this.$message.error('用户删除失败')
       }
       this.$message.success('用户删除成功')
+      if ((this.total - 1) % this.queryInfo.pagesize === 0 && this.total !== 0) {
+        --this.queryInfo.pagenum
+      }
       this.getUserList()
     },
     // 分配角色功能

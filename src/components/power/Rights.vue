@@ -58,7 +58,5 @@ export default {
 </script>
 
 <style scoped >
-.el-card {
-  margin-top: 20px;
-}
+
 </style>

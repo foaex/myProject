@@ -5,6 +5,7 @@ import store from './store'
 // 导入样式表
 import './assets/css/global.css'
 import './plugins/element.js'
+import TreeTable from 'vue-table-with-tree-grid'
 // 导入字体图标
 import './assets/fonts/iconfont.css'
 // 导入element-ui 的样式表
@@ -21,7 +22,7 @@ axios.interceptors.request.use(config => {
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
-
+Vue.component('tree-table', TreeTable)
 new Vue({
   router,
   store,
