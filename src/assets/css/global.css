@@ -6,6 +6,7 @@ body,
 	margin: 0;
 	padding: 0;
 	min-width: 85.375rem;
+	box-sizing: border-box !important;
 }
 
 * {
@@ -21,8 +22,14 @@ body,
 	box-sizing: border-box;
 }
 
-.el-card {
+.el-card,
+.el-table,
+.el-pagination {
 	margin-top: 20px;
+}
+
+.el-step__title {
+	font-size: 14p;
 }
 
 .el-cascader-panel .el-radio {
@@ -40,4 +47,8 @@ body,
 
 .el-cascader-panel .el-cascader-node__postfix {
 	top: 10px;
+}
+
+.ql-editor {
+	min-height: 240px;
 }

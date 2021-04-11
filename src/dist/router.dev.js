@@ -25,6 +25,10 @@ var _Category = _interopRequireDefault(require("./components/goods/Category.vue"
 
 var _Params = _interopRequireDefault(require("./components/goods/Params.vue"));
 
+var _GoodsList = _interopRequireDefault(require("./components/goods/GoodsList.vue"));
+
+var _Add = _interopRequireDefault(require("./components/goods/Add.vue"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 _vue["default"].use(_vueRouter["default"]);
@@ -58,6 +62,12 @@ var router = new _vueRouter["default"]({
     }, {
       path: '/params',
       component: _Params["default"]
+    }, {
+      path: '/goods',
+      component: _GoodsList["default"]
+    }, {
+      path: '/goods/add',
+      component: _Add["default"]
     }]
   }],
   mode: 'history'

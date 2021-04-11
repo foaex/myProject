@@ -19,4 +19,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+body .el-table th.gutter {
+  display: table-cell !important;
+}
 </style>
