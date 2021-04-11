@@ -52,7 +52,8 @@
           <template slot-scope="scope">
             <el-button type="primary"
                        icon="el-icon-edit"
-                       size="mini"></el-button>
+                       size="mini"
+                       @click="editById(scope.row.goods_id)"></el-button>
             <el-button type="danger"
                        icon="el-icon-delete"
                        size="mini"
@@ -124,6 +125,12 @@ export default {
     // 添加商品方法
     addGoods () {
       this.$router.push('/goods/add')
+    },
+    // 编辑商品功能
+    async editById (id) {
+      const { data: res } = await this.$http.get(`goods/${id}`)
+      console.log(res)
+      return this.$message.warning('编辑功能还在开发中...')
     },
     // 删除商品
     async removeById (id) {
